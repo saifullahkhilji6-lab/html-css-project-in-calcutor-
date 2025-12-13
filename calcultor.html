@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcultors</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000000;
+            font-family: Arial;
+        }
+
+        .calculator {
+            width: 300px;
+            background: #050505da;
+            padding: 20px;
+            border-radius: 20px solid black;
+            box-shadow: 2 4 20px rgba(1, 2, 3, 4.5);
+        }
+
+        #display {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-align: right;
+            padding: 10px;
+            border: 5px;
+            background: #e40c0c;
+            border-radius: 20px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            padding: 18px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            background: #f70b0b;
+            color: rgb(8, 149, 210);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #120900a0;
+        }
+
+        .equal {
+            grid-column: span 2;
+            background: #ff9500;
+        }
+
+        .equal:hover {
+            background: #ffb84d;
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="delChar()">DEL</button>
+                <button onclick="appendValue('%')">%</button>
+                <button onclick="appendValue('/')">/</button>
+
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('*')">*</button>
+
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('-')">-</button>
+
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="appendValue('+')">+</button>
+
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button class="equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+</body>
+
+</html>
